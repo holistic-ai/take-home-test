@@ -1,0 +1,4 @@
+transformers
+torch==2.0.1
+langchain[document_loaders]
+unstructured==0.7.12
