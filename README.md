@@ -46,6 +46,8 @@ You can use the sample pdf files in the `example_documents` folder for testing.
 
 NOTE: its ok to execute the script in a lambda. Although this won't work in production it works when developing locally on your machine.
 
+see https://d311ynoxc2sp8.cloudfront.net/ for an example of how this should work.
+
 ### 2. Implement a details route
 
 The "Name" on the projects table links to `/project/<project_id>` however this route hasn't been implemented. Add route to display the details of the project.
