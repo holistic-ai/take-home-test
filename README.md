@@ -30,7 +30,7 @@ It uses serverless stack to manage the infrastructure see https://sst.dev/ and h
 
 1. Clone the repo
 2. Install the dependencies using `pnpm i`
-3. Deploy the infrastructure using `pnpm sst:dev`. Note that it will be deployed to the `us-east-1` region.
+3. Deploy the infrastructure using `pnpm sst:dev`. Note that it will be deployed to the `us-east-1` region. This requires you to create an IAM user on the AWS account and configure the CLI to access it (see section AWS above).
 4. Call the migrations endpoint to run the migrations on the database. The api url is printed to the console after you run `pnpm sst:dev` in the previous step. The migrations are run by doing a `GET` request at the `/migrations` endpoint. e.g. open `https://xwyoqxra1m.execute-api.us-east-1.amazonaws.com/migrate` in a browser
 5. Start the remix app by running `pnpm dev` and view it on `localhost:3000`
 
@@ -45,6 +45,8 @@ Modify the application so that a user only needs to fill in the project name and
 You can use the sample pdf files in the `example_documents` folder for testing.
 
 NOTE: its ok to execute the script in a lambda. Although this won't work in production it works when developing locally on your machine.
+
+see https://d311ynoxc2sp8.cloudfront.net/ for an example of how this should work.
 
 ### 2. Implement a details route
 
